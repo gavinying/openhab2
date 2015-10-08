@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="eniwise"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+        xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!-- Sample Thing Type -->
+    <thing-type id="scpms6">
+        <label>EniWise SCPM-S6</label>
+        <description>EniWise SCPM-S6 Sub-circuit Power Meter</description>
+
+        <channels>
+            <channel id="V" typeId="voltage"/>
+            <channel id="Hz" typeId="frequency"/>
+            <channel id="kWh1" typeId="kWh"/>
+            <channel id="kWh2" typeId="kWh"/>
+            <channel id="kWh3" typeId="kWh"/>
+            <channel id="kWh4" typeId="kWh"/>
+            <channel id="kWh5" typeId="kWh"/>
+            <channel id="kWh6" typeId="kWh"/>
+            <channel id="kVARh1" typeId="kVARh"/>
+            <channel id="kVARh2" typeId="kVARh"/>
+            <channel id="kVARh3" typeId="kVARh"/>
+            <channel id="kVARh4" typeId="kVARh"/>
+            <channel id="kVARh5" typeId="kVARh"/>
+            <channel id="kVARh6" typeId="kVARh"/>
+            <channel id="A1" typeId="current"/>
+            <channel id="A2" typeId="current"/>
+            <channel id="A3" typeId="current"/>
+            <channel id="A4" typeId="current"/>
+            <channel id="A5" typeId="current"/>
+            <channel id="A6" typeId="current"/>
+            <channel id="PF1" typeId="powerfactor"/>
+            <channel id="PF2" typeId="powerfactor"/>
+            <channel id="PF3" typeId="powerfactor"/>
+            <channel id="PF4" typeId="powerfactor"/>
+            <channel id="PF5" typeId="powerfactor"/>
+            <channel id="PF6" typeId="powerfactor"/>
+        </channels>
+    </thing-type>
+
+    <!-- voltage Channel Type -->
+    <channel-type id="voltage">
+        <item-type>Number</item-type>
+        <label>Voltage</label>
+        <description>Line to Neutral Voltage rms reading</description>
+    </channel-type>
+
+	<channel-type id="frequency">
+        <item-type>Number</item-type>
+        <label>Frequency</label>
+        <description>Line frequency reading</description>
+    </channel-type>
+	
+	<channel-type id="kWh">
+        <item-type>Number</item-type>
+        <label>Active Energy Consumption</label>
+        <description>Accumulated active energy reading</description>
+    </channel-type>
+    
+    <channel-type id="kVARh">
+        <item-type>Number</item-type>
+        <label>Reactive Energy Consumption</label>
+        <description>Accumulated reactive energy reading</description>
+    </channel-type>
+
+	<channel-type id="current">
+        <item-type>Number</item-type>
+        <label>Current</label>
+        <description>current rms reading</description>
+    </channel-type>
+    
+    <channel-type id="powerfactor">
+        <item-type>Number</item-type>
+        <label>Power factor</label>
+        <description>Power factor reading</description>
+    </channel-type>
+    
+</thing:thing-descriptions>
